@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: fe64c0cfce4b5c44db6719c13265ef0b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - zombieCountable: {fileID: 11400000, guid: 9b13badfd951cb548bd1213d6abb72f1, type: 2}
+  - roundCountable: {fileID: 11400000, guid: ea02a8b3b7aa31a4a8a9262311088e25, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

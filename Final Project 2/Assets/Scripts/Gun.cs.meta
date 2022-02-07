@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6147470dc338f3b45bd62a018cb38383
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - animator: {instanceID: 0}
+  - ammoCountable: {instanceID: 0}
+  - fpsCam: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - impactEffect: {instanceID: 0}
+  - pointCountable: {fileID: 11400000, guid: ae8b4b28b9a801444890b2a5dee6e0db, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
