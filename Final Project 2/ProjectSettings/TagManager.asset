@@ -9,6 +9,10 @@ TagManager:
   - Head
   - Zombie
   - Hand
+  - BlockLocation
+  - Familiar
+  - Familiar_Block
+  - FamiliarController
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - Ground
   - Zombie
   - WallBuy
-  - 
+  - BlockLocation
   - 
   - 
   - 
