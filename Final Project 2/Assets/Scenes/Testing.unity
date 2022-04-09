@@ -67354,8 +67354,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1759185169}
-  - component: {fileID: 1759185170}
-  - component: {fileID: 1759185172}
   - component: {fileID: 1759185173}
   m_Layer: 0
   m_Name: FamiliarContainer
@@ -67381,53 +67379,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1759185170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759185168}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d669e783d0554cd98f5cffebbcb5477, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distancePerSecond: 1
-  targetTag: BlockLocation
-  blockLocations: []
-  locationBlocked: 0
-  fpsCam: {fileID: 13950912}
-  TargetLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  isBlocking: 0
-  numOfFamiliarTypes: 2
-  activeFamiliar: {fileID: 0}
-  activeFamiliarIndex: 0
-  familiarList: []
---- !u!114 &1759185172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759185168}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 162c4912f9b38415888fc8a339e67bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 269941052}
-  distanceFromPlayer: 0
-  distancePerSecond: 1
-  innerRadius: 2.5
-  outerRadius: 4.5
-  current: 0
-  nextTimeout: 0
-  mTimeoutDuration: 0.2
-  iTimeoutDuration: 0.2
-  moveState: 0
 --- !u!114 &1759185173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67443,6 +67394,23 @@ MonoBehaviour:
   numOfFamiliarTypes: 2
   familiarList: []
   activeFamiliar: 0
+  player: {fileID: 269941052}
+  distanceFromPlayer: 0
+  distancePerSecond: 3
+  innerRadius: 2.5
+  outerRadius: 4.5
+  current: 0
+  nextTimeout: 0
+  mTimeoutDuration: 0.2
+  iTimeoutDuration: 0.2
+  moveState: 0
+  blockLocations: []
+  locationBlocked: 0
+  fpsCam: {fileID: 13950912}
+  TargetLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  isBlocking: 0
 --- !u!1 &1763197888
 GameObject:
   m_ObjectHideFlags: 0
