@@ -29,10 +29,14 @@ public class FamiliarController : MonoBehaviour
 	public RaycastHit hit;
 	public bool isBlocking = false;
 
+	//Hover?
+	public Hover h;
+
 
 	// Start is called before the first frame update
 	void Start()
 	{
+		h = gameObject.GetComponent<Hover>();
 		// Controller stuff
 		familiarList = new GameObject[numOfFamiliarTypes];
 		familiarList[0] = GameObject.FindGameObjectWithTag("Familiar");
@@ -40,7 +44,7 @@ public class FamiliarController : MonoBehaviour
 		familiarList[0].SetActive(true);
 		familiarList[1].SetActive(false);
 		activeFamiliar = 0;
-		
+
 		// Block stuff
 		blockLocations = GameObject.FindGameObjectsWithTag("BlockLocation");
 
@@ -52,19 +56,24 @@ public class FamiliarController : MonoBehaviour
 		current += Time.deltaTime;
 
 		// "Command" = "v"
-		if(Input.GetButtonDown("Command")){
-			if(activeFamiliar == 0){
+		if (Input.GetButtonDown("Command"))
+		{
+			if (activeFamiliar == 0)
+			{
+				h.shouldHover = false;
 				//switch to blocking
 				familiarList[1].SetActive(true);
 				familiarList[0].SetActive(false);
 				activeFamiliar = 1;
 				distanceFromPlayer = 1f;
 
-				isBlocking = StartBlock(); 
+				isBlocking = StartBlock();
 			}
 			else
 			{
 				//switch to following
+				h.shouldHover = true;
+
 				familiarList[0].SetActive(true);
 				familiarList[1].SetActive(false);
 				activeFamiliar = 0;
@@ -72,7 +81,8 @@ public class FamiliarController : MonoBehaviour
 			}
 		}
 
-		if(activeFamiliar == 0){
+		if (activeFamiliar == 0)
+		{
 			// Follow
 			distanceFromPlayer = Vector3.Distance(transform.position, player.transform.position);
 			if (distanceFromPlayer > outerRadius)
@@ -116,7 +126,8 @@ public class FamiliarController : MonoBehaviour
 			}
 
 		}
-		else if(activeFamiliar == 1 && isBlocking){
+		else if (activeFamiliar == 1 && isBlocking)
+		{
 			Transform t = hit.transform;
 			transform.position = Vector3.MoveTowards(transform.position, t.position, distancePerSecond * Time.deltaTime);
 			if (transform.position.x == t.position.x && Mathf.Abs(transform.position.y - t.position.y) < .1 && transform.position.z == t.position.z)
@@ -125,7 +136,7 @@ public class FamiliarController : MonoBehaviour
 				transform.rotation = t.rotation;
 				isBlocking = false;
 			}
-		}	
+		}
 	}
 
 	bool StartBlock()
